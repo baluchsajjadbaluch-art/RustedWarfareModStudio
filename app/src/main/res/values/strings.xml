@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RW Mod Studio</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_projects">Projects</string>
+    <string name="nav_archive">Archive</string>
+    <string name="nav_editor">Editor</string>
+    <string name="nav_more">Tools</string>
+
+    <!-- Home -->
+    <string name="home_title">Rusted Warfare\nUltimate Mod Studio</string>
+    <string name="home_subtitle">Professional offline studio for creating and editing Rusted Warfare mods</string>
+    <string name="home_open_folder">Open mod folder</string>
+    <string name="home_open_archive">Open ZIP / RWMOD</string>
+    <string name="home_create_mod">Create new mod</string>
+    <string name="home_recent">Recent projects</string>
+    <string name="home_no_recent">No recent projects yet</string>
+    <string name="home_workspace_none">No workspace open</string>
+    <string name="home_workspace_folder">Folder: %1$s</string>
+    <string name="home_workspace_archive">Archive: %1$s</string>
+    <string name="home_features">Modules</string>
+
+    <!-- Feature cards -->
+    <string name="feature_archive">ZIP / RWMOD manager</string>
+    <string name="feature_archive_desc">Browse, edit inside archives, add/remove/extract without unpacking</string>
+    <string name="feature_editor">Code &amp; INI editor</string>
+    <string name="feature_editor_desc">Syntax highlighting, find &amp; replace, undo/redo, multi-tab, project search</string>
+    <string name="feature_validator">Mod validator</string>
+    <string name="feature_validator_desc">Find config errors, broken paths, missing files, duplicate IDs</string>
+    <string name="feature_image">Image editor</string>
+    <string name="feature_image_desc">View, crop, resize, brightness/contrast, replace, batch import</string>
+    <string name="feature_audio">Audio editor</string>
+    <string name="feature_audio_desc">Play, technical info, replace, batch import, convert to WAV</string>
+    <string name="feature_project">Project manager</string>
+    <string name="feature_project_desc">File tree, create/rename/copy/move, multi-select, properties</string>
+    <string name="feature_wizard">New mod wizard</string>
+    <string name="feature_wizard_desc">Generate a ready mod skeleton from a real unit template</string>
+    <string name="feature_export">Export</string>
+    <string name="feature_export_desc">Export as ZIP / RWMOD with pre-check and integrity verification</string>
+
+    <!-- Common actions -->
+    <string name="action_open">Open</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_ok">OK</string>
+    <string name="action_save">Save</string>
+    <string name="action_close">Close</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_move">Move</string>
+    <string name="action_extract">Extract</string>
+    <string name="action_add">Add</string>
+    <string name="action_replace">Replace</string>
+    <string name="action_export">Export</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_back">Back</string>
+    <string name="action_done">Done</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_apply">Apply</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_select_all">Select all</string>
+    <string name="action_pick">Choose…</string>
+
+    <string name="common_error">Error: %1$s</string>
+    <string name="common_success">Done</string>
+    <string name="common_loading">Working…</string>
+    <string name="common_cancelled">Operation cancelled</string>
+    <string name="common_low_storage">Low storage — operation stopped for safety</string>
+    <string name="common_confirm_delete">Delete %1$d item(s)? This cannot be undone. A backup of archives will be created first.</string>
+    <string name="common_file">File</string>
+    <string name="common_folder">Folder</string>
+    <string name="common_name">Name</string>
+    <string name="common_path">Path</string>
+
+    <!-- Archive -->
+    <string name="archive_title">ZIP / RWMOD Manager</string>
+    <string name="archive_open">Open archive (ZIP, RWMOD)</string>
+    <string name="archive_empty">Archive is empty or not open</string>
+    <string name="archive_entries">%1$d entries</string>
+    <string name="archive_add_files">Add files…</string>
+    <string name="archive_delete_selected">Delete selected</string>
+    <string name="archive_extract_selected">Extract selected…</string>
+    <string name="archive_extract_all">Extract all…</string>
+    <string name="archive_new_name">New name / path</string>
+    <string name="archive_verify_ok">Archive saved and integrity verified (CRC OK)</string>
+    <string name="archive_verify_failed">Integrity check FAILED — original restored from backup</string>
+    <string name="archive_backup_created">Backup of the original archive was saved</string>
+    <string name="archive_saved">Archive saved</string>
+    <string name="archive_invalid">Not a valid ZIP-based archive</string>
+    <string name="archive_opening">Opening archive…</string>
+    <string name="archive_valid_rwmod">Valid RWMOD: ZIP-compatible container detected</string>
+    <string name="archive_zip_type">Plain ZIP archive</string>
+    <string name="archive_select_entry">Select entries</string>
+    <string name="archive_preview_text">Preview</string>
+    <string name="archive_no_preview">No preview for binary file</string>
+    <string name="archive_entry_replaced">Entry replaced</string>
+    <string name="archive_entry_added">%1$d file(s) added</string>
+    <string name="archive_entry_deleted">Entries deleted</string>
+    <string name="archive_entry_renamed">Entry renamed/moved</string>
+    <string name="archive_import_target">Import into folder (empty for archive root)</string>
+    <string name="archive_unsafe_skipped">%1$d unsafe path(s) skipped (zip-slip protection)</string>
+    <string name="archive_open_zip_hint">RWMOD files are ZIP-compatible packages; a renamed file without ZIP structure will be rejected.</string>
+
+    <!-- Editor -->
+    <string name="editor_title">Code &amp; INI Editor</string>
+    <string name="editor_open_file">Open text/INI file…</string>
+    <string name="editor_open_from_archive">Open entry from archive</string>
+    <string name="editor_save">Save</string>
+    <string name="editor_saved">Saved</string>
+    <string name="editor_save_failed">Save failed: %1$s</string>
+    <string name="editor_find">Find</string>
+    <string name="editor_replace">Replace</string>
+    <string name="editor_find_hint">Search…</string>
+    <string name="editor_replace_hint">Replace with…</string>
+    <string name="editor_next">Next</string>
+    <string name="editor_prev">Previous</string>
+    <string name="editor_replace_one">Replace</string>
+    <string name="editor_replace_all">Replace all</string>
+    <string name="editor_case_sensitive">Aa</string>
+    <string name="editor_no_matches">No matches</string>
+    <string name="editor_matches">%1$d matches</string>
+    <string name="editor_goto_line">Go to line</string>
+    <string name="editor_goto">Go</string>
+    <string name="editor_undo">Undo</string>
+    <string name="editor_redo">Redo</string>
+    <string name="editor_font_size">Font size</string>
+    <string name="editor_close_tab">Close tab</string>
+    <string name="editor_unsaved">●</string>
+    <string name="editor_lines_chars">%1$d lines · %2$d chars</string>
+    <string name="editor_syntax">INI syntax</string>
+    <string name="editor_hint_empty">Open a file or an archive entry to start editing</string>
+    <string name="editor_confirm_close">Unsaved changes will be lost. Close anyway?</string>
+
+    <!-- Validator -->
+    <string name="validator_title">Mod Validator</string>
+    <string name="validator_run">Run validation</string>
+    <string name="validator_running">Validating…</string>
+    <string name="validator_clean">No problems found. Mod structure looks healthy.</string>
+    <string name="validator_errors_n">Errors: %1$d</string>
+    <string name="validator_warnings_n">Warnings: %1$d</string>
+    <string name="validator_infos_n">Info: %1$d</string>
+    <string name="validator_files_scanned">Files scanned: %1$d</string>
+    <string name="validator_export_report">Export report…</string>
+    <string name="validator_report_saved">Report saved</string>
+    <string name="validator_pick_folder">Validate a mod folder</string>
+    <string name="validator_uses_archive">Validates the currently open archive</string>
+    <string name="validator_line">Line %1$d</string>
+    <string name="validator_suggestion">Suggestion: %1$s</string>
+    <string name="validator_target">Target</string>
+    <string name="validator_unknown_note">Unknown keys are reported as info only — they are never removed automatically.</string>
+
+    <!-- Image editor -->
+    <string name="image_title">Image Editor</string>
+    <string name="image_open_from_archive">From archive</string>
+    <string name="image_open_from_folder">From folder</string>
+    <string name="image_rotate">Rotate 90°</string>
+    <string name="image_flip_h">Flip H</string>
+    <string name="image_flip_v">Flip V</string>
+    <string name="image_brightness">Brightness</string>
+    <string name="image_contrast">Contrast</string>
+    <string name="image_crop">Crop</string>
+    <string name="image_resize">Resize</string>
+    <string name="image_width">Width</string>
+    <string name="image_height">Height</string>
+    <string name="image_keep_aspect">Keep aspect ratio</string>
+    <string name="image_quality">JPEG quality</string>
+    <string name="image_format">Format</string>
+    <string name="image_save">Save changes</string>
+    <string name="image_info">File info</string>
+    <string name="image_dimensions">%1$d × %2$d px</string>
+    <string name="image_file_size">Size: %1$s</string>
+    <string name="image_compare">Compare before/after</string>
+    <string name="image_batch_import">Batch import images…</string>
+    <string name="image_saved">Image saved</string>
+    <string name="image_load_failed">Could not load image</string>
+    <string name="image_converted">Format converted</string>
+    <string name="image_original">Original</string>
+    <string name="image_edited">Edited</string>
+    <string name="image_alpha_warn">JPEG does not support transparency; transparent areas become black.</string>
+
+    <!-- Audio -->
+    <string name="audio_title">Audio Editor</string>
+    <string name="audio_open_from_archive">From archive</string>
+    <string name="audio_open_from_folder">From folder</string>
+    <string name="audio_play">Play</string>
+    <string name="audio_pause">Pause</string>
+    <string name="audio_stop">Stop</string>
+    <string name="audio_info">Technical info</string>
+    <string name="audio_sample_rate">Sample rate: %1$d Hz</string>
+    <string name="audio_channels">Channels: %1$d</string>
+    <string name="audio_bitrate">Bitrate: %1$d kbps</string>
+    <string name="audio_codec">Codec: %1$s</string>
+    <string name="audio_duration">Duration: %1$s</string>
+    <string name="audio_replace">Replace in archive…</string>
+    <string name="audio_import_batch">Batch import…</string>
+    <string name="audio_convert_wav">Convert to WAV (PCM)</string>
+    <string name="audio_converting">Converting…</string>
+    <string name="audio_check_refs">Check INI references</string>
+    <string name="audio_refs_found">Referenced by %1$d INI file(s)</string>
+    <string name="audio_no_refs">No INI reference found for this file</string>
+    <string name="audio_saved">Audio saved</string>
+
+    <!-- Project manager -->
+    <string name="project_title">Project Manager</string>
+    <string name="project_open_folder">Open mod folder…</string>
+    <string name="project_new_file">New file</string>
+    <string name="project_new_folder">New folder</string>
+    <string name="project_properties">Properties</string>
+    <string name="project_size">Size: %1$s</string>
+    <string name="project_modified">Modified: %1$s</string>
+    <string name="project_type">Type: %1$s</string>
+    <string name="project_search">Search files…</string>
+    <string name="project_sort">Sort</string>
+    <string name="project_multi_select">Multi-select</string>
+    <string name="project_selected_n">%1$d selected</string>
+    <string name="project_empty">Folder is empty</string>
+    <string name="project_copied">Copied</string>
+    <string name="project_moved">Moved</string>
+    <string name="project_created">Created</string>
+    <string name="project_renamed">Renamed</string>
+    <string name="project_deleted">Deleted</string>
+    <string name="project_file_name">File name</string>
+    <string name="project_saving">File operation running…</string>
+
+    <!-- Wizard -->
+    <string name="wizard_title">New Mod Wizard</string>
+    <string name="wizard_name">Mod name</string>
+    <string name="wizard_name_hint">e.g. Ultimate Tank Pack</string>
+    <string name="wizard_description">Description</string>
+    <string name="wizard_author">Author</string>
+    <string name="wizard_version">Version</string>
+    <string name="wizard_pick_parent">Choose parent folder…</string>
+    <string name="wizard_as_folder">Create as folder (recommended for development)</string>
+    <string name="wizard_as_rwmod">Create as .rwmod package (ZIP-compatible)</string>
+    <string name="wizard_create">Create mod</string>
+    <string name="wizard_created_ok">Mod created successfully</string>
+    <string name="wizard_name_required">Mod name is required</string>
+    <string name="wizard_creating">Creating mod…</string>
+    <string name="wizard_info_note">A sample unit, a real PNG sprite, mod_info.ini and a README are generated based on community-documented Rusted Warfare conventions.</string>
+
+    <!-- Export -->
+    <string name="export_title">Export</string>
+    <string name="export_as_zip">Export open archive/folder as ZIP…</string>
+    <string name="export_as_rwmod">Export open archive as .rwmod…</string>
+    <string name="export_selection">Export selected entries…</string>
+    <string name="export_extract_all">Extract everything to folder…</string>
+    <string name="export_precheck">Pre-export check</string>
+    <string name="export_precheck_msg">Validation found %1$d error(s). Export anyway?</string>
+    <string name="export_precheck_continue">Export anyway</string>
+    <string name="export_postcheck_ok">Export verified: %1$d entries, CRC OK</string>
+    <string name="export_postcheck_fail">Post-export verification FAILED: %1$s</string>
+    <string name="export_pick_dest">Choose destination…</string>
+    <string name="export_running">Exporting…</string>
+    <string name="export_done">Export finished</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_dark">Dark</string>
+    <string name="settings_light">Light</string>
+    <string name="settings_system">System</string>
+    <string name="settings_font">Editor font size</string>
+    <string name="settings_undo_depth">Undo history depth</string>
+    <string name="settings_keep_screen">Keep screen on while editing</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="settings_locale_note">UI language follows the system language (Persian/RTL supported). App is fully offline.</string>
+    <string name="settings_charset">Text charset detection</string>
+</resources>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">استودیو ماد آراستد وارفیر</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">خانه</string>
+    <string name="nav_projects">پروژه‌ها</string>
+    <string name="nav_archive">آرشیو</string>
+    <string name="nav_editor">ویرایشگر</string>
+    <string name="nav_more">ابزارها</string>
+
+    <!-- Home -->
+    <string name="home_title">استودیوی نهایی مادسازی\nراستد وارفیر</string>
+    <string name="home_subtitle">استودیوی حرفه‌ای آفلاین برای ساخت و ویرایش مادهای بازی Rusted Warfare</string>
+    <string name="home_open_folder">باز کردن پوشه ماد</string>
+    <string name="home_open_archive">باز کردن ZIP / RWMOD</string>
+    <string name="home_create_mod">ساخت ماد جدید</string>
+    <string name="home_recent">پروژه‌های اخیر</string>
+    <string name="home_no_recent">هنوز پروژه‌ای باز نشده است</string>
+    <string name="home_workspace_none">هیچ فضای کاری بازی نیست</string>
+    <string name="home_workspace_folder">پوشه: %1$s</string>
+    <string name="home_workspace_archive">آرشیو: %1$s</string>
+    <string name="home_features">ماژول‌ها</string>
+
+    <!-- Feature cards -->
+    <string name="feature_archive">مدیریت ZIP / RWMOD</string>
+    <string name="feature_archive_desc">مرور و ویرایش داخل آرشیو، افزودن/حذف/استخراج بدون باز کردن بسته</string>
+    <string name="feature_editor">ویرایشگر کد و INI</string>
+    <string name="feature_editor_desc">رنگ‌آمیزی دستور زبان، جست‌وجو و جایگزینی، واگرد/ازنو، چند تب، جست‌وجوی کل پروژه</string>
+    <string name="feature_validator">اعتبارسنج ماد</string>
+    <string name="feature_validator_desc">یافتن خطاهای پیکربندی، مسیرهای خراب، فایل‌های گمشده و شناسه‌های تکراری</string>
+    <string name="feature_image">ویرایشگر تصویر</string>
+    <string name="feature_image_desc">نمایش، برش، تغییر اندازه، روشنایی/کنتراست، جایگزینی و ورود دسته‌ای</string>
+    <string name="feature_audio">ویرایشگر صدا</string>
+    <string name="feature_audio_desc">پخش، اطلاعات فنی، جایگزینی، ورود دسته‌ای و تبدیل به WAV</string>
+    <string name="feature_project">مدیریت پروژه</string>
+    <string name="feature_project_desc">درخت فایل، ساخت/تغییرنام/کپی/انتقال، چندانتخابی و مشخصات فایل</string>
+    <string name="feature_wizard">ویزارد ماد جدید</string>
+    <string name="feature_wizard_desc">ساخت اسکلت آماده ماد بر پایه قالب واقعی یک واحد</string>
+    <string name="feature_export">خروجی گرفتن</string>
+    <string name="feature_export_desc">خروجی ZIP / RWMOD با بررسی پیش از خروجی و صحت‌سنجی یکپارچگی</string>
+
+    <!-- Common actions -->
+    <string name="action_open">باز کردن</string>
+    <string name="action_cancel">لغو</string>
+    <string name="action_ok">تأیید</string>
+    <string name="action_save">ذخیره</string>
+    <string name="action_close">بستن</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_rename">تغییر نام</string>
+    <string name="action_copy">کپی</string>
+    <string name="action_move">انتقال</string>
+    <string name="action_extract">استخراج</string>
+    <string name="action_add">افزودن</string>
+    <string name="action_replace">جایگزینی</string>
+    <string name="action_export">خروجی</string>
+    <string name="action_confirm">تأیید</string>
+    <string name="action_back">بازگشت</string>
+    <string name="action_done">انجام شد</string>
+    <string name="action_retry">تلاش دوباره</string>
+    <string name="action_apply">اعمال</string>
+    <string name="action_reset">بازنشانی</string>
+    <string name="action_select_all">انتخاب همه</string>
+    <string name="action_pick">انتخاب…</string>
+
+    <string name="common_error">خطا: %1$s</string>
+    <string name="common_success">انجام شد</string>
+    <string name="common_loading">در حال اجرا…</string>
+    <string name="common_cancelled">عملیات لغو شد</string>
+    <string name="common_low_storage">فضای ذخیره‌سازی کم است — برای حفظ امنیت عملیات متوقف شد</string>
+    <string name="common_confirm_delete">%1$d مورد حذف شود؟ این کار بازگشت‌پذیر نیست. ابتدا از آرشیو نسخه پشتیبان گرفته می‌شود.</string>
+    <string name="common_file">فایل</string>
+    <string name="common_folder">پوشه</string>
+    <string name="common_name">نام</string>
+    <string name="common_path">مسیر</string>
+
+    <!-- Archive -->
+    <string name="archive_title">مدیریت ZIP / RWMOD</string>
+    <string name="archive_open">باز کردن آرشیو (ZIP، RWMOD)</string>
+    <string name="archive_empty">آرشیو خالی است یا باز نشده</string>
+    <string name="archive_entries">%1$d مورد</string>
+    <string name="archive_add_files">افزودن فایل…</string>
+    <string name="archive_delete_selected">حذف انتخاب‌شده‌ها</string>
+    <string name="archive_extract_selected">استخراج انتخاب‌شده‌ها…</string>
+    <string name="archive_extract_all">استخراج همه…</string>
+    <string name="archive_new_name">نام/مسیر جدید</string>
+    <string name="archive_verify_ok">آرشیو ذخیره و صحت آن تأیید شد (CRC درست)</string>
+    <string name="archive_verify_failed">بررسی یکپارچگی ناموفق بود — نسخه اصلی از پشتیبان بازگردانده شد</string>
+    <string name="archive_backup_created">از آرشیو اصلی نسخه پشتیبان گرفته شد</string>
+    <string name="archive_saved">آرشیو ذخیره شد</string>
+    <string name="archive_invalid">این فایل یک بسته معتبر مبتنی بر ZIP نیست</string>
+    <string name="archive_opening">در حال باز کردن آرشیو…</string>
+    <string name="archive_valid_rwmod">RWMOD معتبر: بسته سازگار با ZIP شناسایی شد</string>
+    <string name="archive_zip_type">آرشیو ZIP معمولی</string>
+    <string name="archive_select_entry">انتخاب موارد</string>
+    <string name="archive_preview_text">پیش‌نمایش</string>
+    <string name="archive_no_preview">برای فایل باینری پیش‌نمایشی وجود ندارد</string>
+    <string name="archive_entry_replaced">محتوای فایل جایگزین شد</string>
+    <string name="archive_entry_added">%1$d فایل اضافه شد</string>
+    <string name="archive_entry_deleted">موارد حذف شدند</string>
+    <string name="archive_entry_renamed">نام/مسیر تغییر کرد</string>
+    <string name="archive_import_target">ورود به پوشه (خالی = ریشه آرشیو)</string>
+    <string name="archive_unsafe_skipped">%1$d مسیر ناامن نادیده گرفته شد (محافظت zip-slip)</string>
+    <string name="archive_open_zip_hint">فایل‌های RWMOD بسته‌های سازگار با ZIP هستند؛ فایلی که فقط پسوندش عوض شده باشد و ساختار ZIP نداشته باشد پذیرفته نمی‌شود.</string>
+
+    <!-- Editor -->
+    <string name="editor_title">ویرایشگر کد و INI</string>
+    <string name="editor_open_file">باز کردن فایل متنی/INI…</string>
+    <string name="editor_open_from_archive">باز کردن فایل از آرشیو</string>
+    <string name="editor_save">ذخیره</string>
+    <string name="editor_saved">ذخیره شد</string>
+    <string name="editor_save_failed">ذخیره ناموفق: %1$s</string>
+    <string name="editor_find">یافتن</string>
+    <string name="editor_replace">جایگزینی</string>
+    <string name="editor_find_hint">جست‌وجو…</string>
+    <string name="editor_replace_hint">جایگزینی با…</string>
+    <string name="editor_next">بعدی</string>
+    <string name="editor_prev">قبلی</string>
+    <string name="editor_replace_one">جایگزینی</string>
+    <string name="editor_replace_all">جایگزینی همه</string>
+    <string name="editor_case_sensitive">حساس به حروف</string>
+    <string name="editor_no_matches">موردی یافت نشد</string>
+    <string name="editor_matches">%1$d مورد یافت شد</string>
+    <string name="editor_goto_line">برو به خط</string>
+    <string name="editor_goto">برو</string>
+    <string name="editor_undo">واگرد</string>
+    <string name="editor_redo">ازنو</string>
+    <string name="editor_font_size">اندازه فونت</string>
+    <string name="editor_close_tab">بستن تب</string>
+    <string name="editor_unsaved">●</string>
+    <string name="editor_lines_chars">%1$d خط · %2$d نویسه</string>
+    <string name="editor_syntax">دستور زبان INI</string>
+    <string name="editor_hint_empty">برای شروع ویرایش یک فایل یا فایل داخل آرشیو را باز کنید</string>
+    <string name="editor_confirm_close">تغییرات ذخیره‌نشده از بین می‌روند. باز هم بسته شود؟</string>
+
+    <!-- Validator -->
+    <string name="validator_title">اعتبارسنج ماد</string>
+    <string name="validator_run">اجرای بررسی</string>
+    <string name="validator_running">در حال بررسی…</string>
+    <string name="validator_clean">مشکلی یافت نشد. ساختار ماد سالم به نظر می‌رسد.</string>
+    <string name="validator_errors_n">خطاها: %1$d</string>
+    <string name="validator_warnings_n">هشدارها: %1$d</string>
+    <string name="validator_infos_n">اطلاع: %1$d</string>
+    <string name="validator_files_scanned">فایل‌های بررسی‌شده: %1$d</string>
+    <string name="validator_export_report">خروجی گرفتن از گزارش…</string>
+    <string name="validator_report_saved">گزارش ذخیره شد</string>
+    <string name="validator_pick_folder">بررسی یک پوشه ماد</string>
+    <string name="validator_uses_archive">آرشیو بازشده بررسی می‌شود</string>
+    <string name="validator_line">خط %1$d</string>
+    <string name="validator_suggestion">پیشنهاد: %1$s</string>
+    <string name="validator_target">هدف</string>
+    <string name="validator_unknown_note">کلیدهای ناشناخته فقط به‌صورت اطلاع گزارش می‌شوند و هرگز خودکار حذف نمی‌شوند.</string>
+
+    <!-- Image editor -->
+    <string name="image_title">ویرایشگر تصویر</string>
+    <string name="image_open_from_archive">از آرشیو</string>
+    <string name="image_open_from_folder">از پوشه</string>
+    <string name="image_rotate">چرخش ۹۰°</string>
+    <string name="image_flip_h">آینه افقی</string>
+    <string name="image_flip_v">آینه عمودی</string>
+    <string name="image_brightness">روشنایی</string>
+    <string name="image_contrast">کنتراست</string>
+    <string name="image_crop">برش</string>
+    <string name="image_resize">تغییر اندازه</string>
+    <string name="image_width">عرض</string>
+    <string name="image_height">ارتفاع</string>
+    <string name="image_keep_aspect">حفظ نسبت ابعاد</string>
+    <string name="image_quality">کیفیت JPEG</string>
+    <string name="image_format">قالب</string>
+    <string name="image_save">ذخیره تغییرات</string>
+    <string name="image_info">مشخصات فایل</string>
+    <string name="image_dimensions">%1$d × %2$d پیکسل</string>
+    <string name="image_file_size">حجم: %1$s</string>
+    <string name="image_compare">مقایسه قبل/بعد</string>
+    <string name="image_batch_import">ورود دسته‌ای تصاویر…</string>
+    <string name="image_saved">تصویر ذخیره شد</string>
+    <string name="image_load_failed">بارگذاری تصویر ممکن نشد</string>
+    <string name="image_converted">قالب تصویر تبدیل شد</string>
+    <string name="image_original">اصلی</string>
+    <string name="image_edited">ویرایش‌شده</string>
+    <string name="image_alpha_warn">قالب JPEG شفافیت را پشتیبانی نمی‌کند؛ نواحی شفاف سیاه می‌شوند.</string>
+
+    <!-- Audio -->
+    <string name="audio_title">ویرایشگر صدا</string>
+    <string name="audio_open_from_archive">از آرشیو</string>
+    <string name="audio_open_from_folder">از پوشه</string>
+    <string name="audio_play">پخش</string>
+    <string name="audio_pause">توقف موقت</string>
+    <string name="audio_stop">ایست</string>
+    <string name="audio_info">اطلاعات فنی</string>
+    <string name="audio_sample_rate">نرخ نمونه: %1$d هرتز</string>
+    <string name="audio_channels">کانال‌ها: %1$d</string>
+    <string name="audio_bitrate">بیت‌ریت: %1$d کیلوبیت‌برثانیه</string>
+    <string name="audio_codec">کدک: %1$s</string>
+    <string name="audio_duration">مدت: %1$s</string>
+    <string name="audio_replace">جایگزینی در آرشیو…</string>
+    <string name="audio_import_batch">ورود دسته‌ای…</string>
+    <string name="audio_convert_wav">تبدیل به WAV (PCM)</string>
+    <string name="audio_converting">در حال تبدیل…</string>
+    <string name="audio_check_refs">بررسی ارجاع‌های INI</string>
+    <string name="audio_refs_found">در %1$d فایل INI ارجاع داده شده است</string>
+    <string name="audio_no_refs">هیچ ارجاعی به این فایل در INIها پیدا نشد</string>
+    <string name="audio_saved">صدا ذخیره شد</string>
+
+    <!-- Project manager -->
+    <string name="project_title">مدیریت پروژه</string>
+    <string name="project_open_folder">باز کردن پوشه ماد…</string>
+    <string name="project_new_file">فایل جدید</string>
+    <string name="project_new_folder">پوشه جدید</string>
+    <string name="project_properties">مشخصات</string>
+    <string name="project_size">حجم: %1$s</string>
+    <string name="project_modified">آخرین تغییر: %1$s</string>
+    <string name="project_type">نوع: %1$s</string>
+    <string name="project_search">جست‌وجوی فایل…</string>
+    <string name="project_sort">مرتب‌سازی</string>
+    <string name="project_multi_select">چندانتخابی</string>
+    <string name="project_selected_n">%1$d مورد انتخاب شده</string>
+    <string name="project_empty">پوشه خالی است</string>
+    <string name="project_copied">کپی شد</string>
+    <string name="project_moved">انتقال یافت</string>
+    <string name="project_created">ایجاد شد</string>
+    <string name="project_renamed">نام تغییر کرد</string>
+    <string name="project_deleted">حذف شد</string>
+    <string name="project_file_name">نام فایل</string>
+    <string name="project_saving">عملیات فایل در حال اجراست…</string>
+
+    <!-- Wizard -->
+    <string name="wizard_title">ویزارد ماد جدید</string>
+    <string name="wizard_name">نام ماد</string>
+    <string name="wizard_name_hint">مثلاً: بسته نهایی تانک‌ها</string>
+    <string name="wizard_description">توضیحات</string>
+    <string name="wizard_author">سازنده</string>
+    <string name="wizard_version">نسخه</string>
+    <string name="wizard_pick_parent">انتخاب پوشه والد…</string>
+    <string name="wizard_as_folder">ساخت به‌صورت پوشه (توصیه‌شده برای توسعه)</string>
+    <string name="wizard_as_rwmod">ساخت به‌صورت بسته .rwmod (سازگار با ZIP)</string>
+    <string name="wizard_create">ساخت ماد</string>
+    <string name="wizard_created_ok">ماد با موفقیت ساخته شد</string>
+    <string name="wizard_name_required">نام ماد الزامی است</string>
+    <string name="wizard_creating">در حال ساخت ماد…</string>
+    <string name="wizard_info_note">یک واحد نمونه، یک تصویر PNG واقعی، mod_info.ini و یک README بر پایه قراردادهای مستند جامعه مادسازی Rusted Warfare ساخته می‌شوند.</string>
+
+    <!-- Export -->
+    <string name="export_title">خروجی گرفتن</string>
+    <string name="export_as_zip">خروجی آرشیو/پوشه باز به‌صورت ZIP…</string>
+    <string name="export_as_rwmod">خروجی آرشیو باز به‌صورت .rwmod…</string>
+    <string name="export_selection">خروجی موارد انتخاب‌شده…</string>
+    <string name="export_extract_all">استخراج کامل در پوشه…</string>
+    <string name="export_precheck">بررسی پیش از خروجی</string>
+    <string name="export_precheck_msg">بررسی اعتبارسنجی %1$d خطا یافت. با این حال خروجی گرفته شود؟</string>
+    <string name="export_precheck_continue">با این حال خروجی بگیر</string>
+    <string name="export_postcheck_ok">خروجی تأیید شد: %1$d مورد، CRC درست</string>
+    <string name="export_postcheck_fail">صحت‌سنجی پس از خروجی ناموفق بود: %1$s</string>
+    <string name="export_pick_dest">انتخاب مقصد…</string>
+    <string name="export_running">در حال خروجی گرفتن…</string>
+    <string name="export_done">خروجی تمام شد</string>
+
+    <!-- Settings -->
+    <string name="settings_title">تنظیمات</string>
+    <string name="settings_theme">پوسته</string>
+    <string name="settings_dark">تیره</string>
+    <string name="settings_light">روشن</string>
+    <string name="settings_system">سیستم</string>
+    <string name="settings_font">اندازه فونت ویرایشگر</string>
+    <string name="settings_undo_depth">عمق تاریخچه واگرد</string>
+    <string name="settings_keep_screen">روشن ماندن صفحه هنگام ویرایش</string>
+    <string name="settings_about">درباره</string>
+    <string name="settings_version">نسخه %1$s</string>
+    <string name="settings_locale_note">زبان رابط از زبان سیستم پیروی می‌کند (فارسی و راست‌به‌چپ پشتیبانی می‌شود). برنامه کاملاً آفلاین است.</string>
+    <string name="settings_charset">تشخیص کدگذاری متن</string>
+</resources>

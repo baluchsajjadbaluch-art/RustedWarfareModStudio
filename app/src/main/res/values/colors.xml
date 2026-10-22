@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_bg">#FF14161A</color>
+    <color name="status_bar">#FF0D0E11</color>
+    <color name="ic_launcher_background">#FF1C1F26</color>
+</resources>

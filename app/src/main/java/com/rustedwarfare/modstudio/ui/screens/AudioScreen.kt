@@ -53,7 +53,6 @@ fun AudioScreen(graph: AppGraph, nav: NavController) {
     var convertResult by remember { mutableStateOf<Pair<ByteArray, AudioOps.AudioInfo>?>(null) }
     var importTargetOpen by remember { mutableStateOf(false) }
     var pendingImportUris by remember { mutableStateOf<List<android.net.Uri>>(emptyList()) }
-    var wavArchiveName by remember { mutableStateOf<String?>(null) }
 
     val openAudio = rememberOpenDocPicker(arrayOf("audio/*")) { uri ->
         scope.launch {
@@ -234,7 +233,6 @@ fun AudioScreen(graph: AppGraph, nav: NavController) {
                     convertResult = null
                     val base = (current?.name ?: "audio").substringAfterLast('/').substringBeforeLast('.')
                     val entry = "sounds/${base}_converted.wav"
-                    wavArchiveName = entry
                     if (archive.current != null) {
                         scope.launch {
                             audio.addWavToArchive(entry, wav)
@@ -250,9 +248,5 @@ fun AudioScreen(graph: AppGraph, nav: NavController) {
                 TextButton(onClick = { convertResult = null }) { Text(stringResource(R.string.action_cancel)) }
             }
         )
-    }
-    wavArchiveName?.let {
-        // consumed when archive absent — reset after export dialog closes
-        if (archive.current != null) wavArchiveName = null
     }
 }

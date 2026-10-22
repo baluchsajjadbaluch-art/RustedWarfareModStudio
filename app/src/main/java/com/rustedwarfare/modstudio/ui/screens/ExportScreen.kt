@@ -223,9 +223,9 @@ private suspend fun runExport(
 @Composable
 private fun ExportCard(title: String, enabled: Boolean = true, onClick: () -> Unit) {
     Card(
-        Modifier.fillMaxWidth(),
         onClick = onClick,
-        enabled = enabled
+        enabled = enabled,
+        modifier = Modifier.fillMaxWidth()
     ) {
         Text(
             title,

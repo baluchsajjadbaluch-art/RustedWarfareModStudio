@@ -417,23 +417,28 @@ class ArchiveRepository(private val app: Application) {
         val result = rebuild(
             exclude = affected,
             append = { zos ->
-                val ctx = current ?: return@append
-                resolver.openInputStream(ctx.uri)!!.use { raw ->
-                    ZipInputStream(BufferedInputStream(raw, BUF)).use { zis ->
-                        while (true) {
-                            val e = zis.nextEntry ?: break
-                            val norm = ZipPaths.normalize(e.name) ?: run { zis.closeEntry(); continue }
-                            if (norm !in affected) { zis.closeEntry(); continue }
-                            val mapped = when {
-                                norm == oldPath -> if (isDir) newDir else newPath
-                                isDir -> ZipPaths.join(newDir, norm.removePrefix(oldDir))
-                                else -> newPath
+                val ctx = current
+                if (ctx != null) {
+                    resolver.openInputStream(ctx.uri)!!.use { raw ->
+                        ZipInputStream(BufferedInputStream(raw, BUF)).use { zis ->
+                            while (true) {
+                                val e = zis.nextEntry ?: break
+                                val norm = ZipPaths.normalize(e.name)
+                                if (norm == null || norm !in affected) {
+                                    zis.closeEntry()
+                                } else {
+                                    val mapped = when {
+                                        norm == oldPath -> if (isDir) newDir else newPath
+                                        isDir -> ZipPaths.join(newDir, norm.removePrefix(oldDir))
+                                        else -> newPath
+                                    }
+                                    val outName = if (e.isDirectory && !mapped.endsWith("/")) "$mapped/" else mapped
+                                    zos.putNextEntry(ZipEntry(outName).apply { time = e.time })
+                                    if (!e.isDirectory) zis.copyTo(zos, BUF)
+                                    zos.closeEntry()
+                                    zis.closeEntry()
+                                }
                             }
-                            val outName = if (e.isDirectory && !mapped.endsWith("/")) "$mapped/" else mapped
-                            zos.putNextEntry(ZipEntry(outName).apply { time = e.time })
-                            if (!e.isDirectory) zis.copyTo(zos, BUF)
-                            zos.closeEntry()
-                            zis.closeEntry()
                         }
                     }
                 }
@@ -464,9 +469,19 @@ class ArchiveRepository(private val app: Application) {
                         while (true) {
                             val e = zis.nextEntry ?: break
                             checkCancel()
-                            val norm = ZipPaths.normalize(e.name) ?: run { zis.closeEntry(); continue }
-                            if (norm !in wanted) { zis.closeEntry(); continue }
-                            if (e.isDirectory || norm.endsWith("/")) { zis.closeEntry(); continue }
+                            val norm = ZipPaths.normalize(e.name)
+                            if (norm == null) {
+                                zis.closeEntry()
+                                continue
+                            }
+                            if (norm !in wanted) {
+                                zis.closeEntry()
+                                continue
+                            }
+                            if (e.isDirectory || norm.endsWith("/")) {
+                                zis.closeEntry()
+                                continue
+                            }
                             val parent = ensureDir(root, ZipPaths.parentOf(norm))
                             val fName = ZipPaths.fileName(norm)
                             val existing = parent.findFile(fName)
@@ -592,8 +607,11 @@ class ArchiveRepository(private val app: Application) {
                             while (true) {
                                 val e = zis.nextEntry ?: break
                                 checkCancel()
-                                val norm = ZipPaths.normalize(e.name) ?: run { zis.closeEntry(); continue }
-                                if (norm !in names) { zis.closeEntry(); continue }
+                                val norm = ZipPaths.normalize(e.name)
+                                if (norm == null || norm !in names) {
+                                    zis.closeEntry()
+                                    continue
+                                }
                                 if (e.isDirectory) {
                                     zos.putNextEntry(ZipEntry(if (norm.endsWith("/")) norm else "$norm/"))
                                     zos.closeEntry()

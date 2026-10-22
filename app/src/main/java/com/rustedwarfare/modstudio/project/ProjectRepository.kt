@@ -85,9 +85,9 @@ class ProjectRepository(
     // -------------------------------------------------------- operations
 
     private fun mimeFor(name: String): String {
-        val mm = MimeTypeMap.getSingleton()
-        val ext = mm.getFileExtensionFromUrl(name)?.lowercase()
-        return ext?.let { mm.getMimeTypeFromExtension(it) } ?: "application/octet-stream"
+        val ext = android.webkit.MimeTypeMap.getFileExtensionFromUrl(name)?.lowercase()
+        return ext?.let { android.webkit.MimeTypeMap.getSingleton().getMimeTypeFromExtension(it) }
+            ?: "application/octet-stream"
     }
 
     /**
@@ -156,7 +156,7 @@ class ProjectRepository(
             try {
                 val newUri = DocumentsContract.renameDocument(resolver, file.uri, newName)
                 val doc = file.parentFile?.findFile(newName)
-                    ?: DocumentFile.fromSingleUri(app, newUri)
+                    ?: newUri?.let { DocumentFile.fromSingleUri(app, it) }
                     ?: file
                 status = "Renamed to $newName"
                 Result.success(doc)

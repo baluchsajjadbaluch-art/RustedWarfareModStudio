@@ -42,20 +42,20 @@ fun SettingsScreen(graph: AppGraph, nav: NavController) {
             ) {
                 Text(stringResource(R.string.settings_theme), style = MaterialTheme.typography.titleMedium)
                 ThemeOption(stringResource(R.string.settings_system), settings.themeMode == SettingsStore.THEME_SYSTEM) {
-                    settings.setTheme(SettingsStore.THEME_SYSTEM)
+                    settings.updateTheme(SettingsStore.THEME_SYSTEM)
                 }
                 ThemeOption(stringResource(R.string.settings_dark), settings.themeMode == SettingsStore.THEME_DARK) {
-                    settings.setTheme(SettingsStore.THEME_DARK)
+                    settings.updateTheme(SettingsStore.THEME_DARK)
                 }
                 ThemeOption(stringResource(R.string.settings_light), settings.themeMode == SettingsStore.THEME_LIGHT) {
-                    settings.setTheme(SettingsStore.THEME_LIGHT)
+                    settings.updateTheme(SettingsStore.THEME_LIGHT)
                 }
 
                 Spacer(Modifier.padding(top = 16.dp))
                 Text(stringResource(R.string.settings_font) + ": ${settings.editorFontSize.toInt()}")
                 Slider(
                     value = settings.editorFontSize,
-                    onValueChange = { settings.setEditorFontSize(it) },
+                    onValueChange = { settings.updateEditorFontSize(it) },
                     valueRange = 10f..28f,
                     steps = 17
                 )
@@ -64,14 +64,14 @@ fun SettingsScreen(graph: AppGraph, nav: NavController) {
                 Text(stringResource(R.string.settings_undo_depth) + ": ${settings.undoDepth}")
                 Slider(
                     value = settings.undoDepth.toFloat(),
-                    onValueChange = { settings.setUndoDepth(it.toInt()) },
+                    onValueChange = { settings.updateUndoDepth(it.toInt()) },
                     valueRange = 20f..1000f
                 )
 
                 Spacer(Modifier.padding(top = 8.dp))
                 Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
                     Text(stringResource(R.string.settings_keep_screen), Modifier.weight(1f))
-                    Switch(checked = settings.keepScreenOn, onCheckedChange = { settings.setKeepScreenOn(it) })
+                    Switch(checked = settings.keepScreenOn, onCheckedChange = { settings.updateKeepScreenOn(it) })
                 }
 
                 Spacer(Modifier.padding(top = 24.dp))

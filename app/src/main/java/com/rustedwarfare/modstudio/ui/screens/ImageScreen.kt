@@ -43,6 +43,7 @@ import androidx.navigation.NavController
 import com.rustedwarfare.modstudio.AppGraph
 import com.rustedwarfare.modstudio.R
 import com.rustedwarfare.modstudio.core.SafUtils
+import com.rustedwarfare.modstudio.image.ImageRepository
 import com.rustedwarfare.modstudio.image.ImageOps
 import com.rustedwarfare.modstudio.ui.BusyOverlay
 import com.rustedwarfare.modstudio.ui.InputDialog
@@ -378,7 +379,7 @@ fun ImageScreen(graph: AppGraph, nav: NavController) {
 // simple channel removed — pendingSaveName state lives in ImageScreen
 
 @Composable
-private fun EntryPickerDialog(
+internal fun EntryPickerDialog(
     title: String,
     entries: List<String>,
     onPick: (String) -> Unit,

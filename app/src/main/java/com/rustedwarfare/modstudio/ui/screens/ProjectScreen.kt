@@ -210,6 +210,9 @@ fun ProjectScreen(graph: AppGraph, nav: NavController) {
                     }
                 }
             } else {
+                val hits by produceState<List<DocumentFile>>(emptyList(), query, refreshTick) {
+                    value = withContext(Dispatchers.IO) { project.searchTree(query) }
+                }
                 Column(Modifier.fillMaxSize().padding(pad)) {
                     OutlinedTextField(
                         value = query,
@@ -270,9 +273,6 @@ fun ProjectScreen(graph: AppGraph, nav: NavController) {
                                 )
                             }
                         } else {
-                            val hits by produceState<List<DocumentFile>>(emptyList(), query, refreshTick) {
-                                value = withContext(Dispatchers.IO) { project.searchTree(query) }
-                            }
                             if (hits.isEmpty()) {
                                 item { Text(stringResource(R.string.project_empty), Modifier.padding(16.dp)) }
                             }

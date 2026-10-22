@@ -90,9 +90,6 @@ fun EditorScreen(graph: AppGraph, nav: NavController) {
     StatusToast(editor.status) { editor.clearStatus() }
 
     val buffer = editor.active
-    if (editor.busy) {
-        BusyOverlay(stringResource(R.string.common_loading), null, null)
-    }
 
     ScreenScaffold(
         title = stringResource(R.string.editor_title),
@@ -203,6 +200,7 @@ private fun EditorBody(
     val scope = rememberCoroutineScope()
     val settings = graph.settings
     val density = LocalDensity.current
+    val context = LocalContext.current
     val scroll = rememberScrollState()
 
     val fontSize = settings.editorFontSize
@@ -213,7 +211,7 @@ private fun EditorBody(
     // sync external changes (undo/redo/replace-all/goto)
     LaunchedEffect(buffer.id, buffer.text) {
         if (buffer.text != tfv.text) {
-            tfv = TextFieldValue(buffer.text, TextRange(buffer.selection))
+            tfv = TextFieldValue(buffer.text, buffer.selection)
         }
     }
 
@@ -322,7 +320,7 @@ private fun EditorBody(
                         TextButton(onClick = {
                             val n = editor.replaceAll(buffer, query, replacement, caseSensitive)
                             matchIndex = 0
-                            if (n == 0) toast(LocalContext.current, LocalContext.current.getString(R.string.editor_no_matches))
+                            if (n == 0) toast(context, context.getString(R.string.editor_no_matches))
                         }) { Text(stringResource(R.string.editor_replace_all)) }
                         FilterChip(
                             selected = caseSensitive,

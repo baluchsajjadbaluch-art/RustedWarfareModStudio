@@ -28,22 +28,22 @@ class SettingsStore(context: Context) {
     var keepScreenOn: Boolean by mutableStateOf(prefs.getBoolean("keepScreen", false))
         private set
 
-    fun setTheme(mode: String) {
+    fun updateTheme(mode: String) {
         themeMode = mode
         prefs.edit().putString("theme", mode).apply()
     }
 
-    fun setEditorFontSize(size: Float) {
+    fun updateEditorFontSize(size: Float) {
         editorFontSize = size.coerceIn(10f, 28f)
         prefs.edit().putFloat("font", editorFontSize).apply()
     }
 
-    fun setUndoDepth(depth: Int) {
+    fun updateUndoDepth(depth: Int) {
         undoDepth = depth.coerceIn(20, 1000)
         prefs.edit().putInt("undo", undoDepth).apply()
     }
 
-    fun setKeepScreenOn(v: Boolean) {
+    fun updateKeepScreenOn(v: Boolean) {
         keepScreenOn = v
         prefs.edit().putBoolean("keepScreen", v).apply()
     }

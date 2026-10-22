@@ -28,7 +28,7 @@ class IniParserTest {
         assertEquals(3, core.keys.size)
         assertEquals("Tank", core.keys[0].value)
         assertEquals("500", core.keys[1].value) // trailing comment stripped
-        assertEquals(3, core.keys[1].line)      // real line number
+        assertEquals(4, core.keys[1].line)      // real 1-based line number
         assertTrue(ini.problems.isEmpty())
     }
 

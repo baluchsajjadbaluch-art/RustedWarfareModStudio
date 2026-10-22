@@ -108,9 +108,8 @@ object SafUtils {
     }
 
     fun mimeFor(name: String): String {
-        val mm = MimeTypeMap.getSingleton()
-        val ext = mm.getFileExtensionFromUrl(name)?.lowercase()
-        return ext?.let { mm.getMimeTypeFromExtension(it) } ?: "application/octet-stream"
+        val ext = MimeTypeMap.getFileExtensionFromUrl(name)?.lowercase()
+        return ext?.let { MimeTypeMap.getSingleton().getMimeTypeFromExtension(it) } ?: "application/octet-stream"
     }
 
     /** Recursively walk a tree, returning "relative/path" to DocumentFile pairs. */
